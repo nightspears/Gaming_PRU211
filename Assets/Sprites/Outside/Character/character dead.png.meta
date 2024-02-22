@@ -250,7 +250,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      character dead_0: -8679144359948160999
+      character dead_1: -3532702411299378205
+      character dead_2: -1429090220795014901
+      character dead_3: -4534493791502167798
+      character dead_4: -742454136994607372
+      character dead_5: -2858998572634711588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      character walk_0: 8044946406797904040
+      character walk_1: 7356391187152564899
+      character walk_2: -2517190774366652634
+      character walk_3: -5645156775167598702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
