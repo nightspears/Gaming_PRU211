@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1555512132942380047}
-  spreadAngle: 20
+  spreadAngle: 30
   speed: 5
 --- !u!58 &6077496500280769291
 CircleCollider2D:

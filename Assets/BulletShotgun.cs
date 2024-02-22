@@ -10,13 +10,13 @@ public class BulletShotgun : MonoBehaviour
     // Start is called before the first frame update
     // Start is called before the first frame update
     public GameObject projectilePrefab; // Reference to your projectile prefab
-    public float spreadAngle = 200; // Angle of the shotgun spread
+    public float spreadAngle = 30f; // Angle of the shotgun spread
     public float speed = 10f; // Speed of each pellet
 
     void Start()
     {
         
-            float angleOffset = Random.Range(-spreadAngle, spreadAngle);
+            float angleOffset = Random.Range(-spreadAngle/2, spreadAngle/2);
             bulletRB = GetComponent<Rigidbody2D>();
             target = GameObject.FindGameObjectWithTag("Player");
             Vector2 direction = Quaternion.Euler(0, 0, angleOffset) * target.transform.position - transform.position;
