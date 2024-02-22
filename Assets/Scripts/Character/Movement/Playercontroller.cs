@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Playercontroller : MonoBehaviour
 {
     // SerializeField attribute allows the variable to be shown in the Inspector
     [SerializeField]
