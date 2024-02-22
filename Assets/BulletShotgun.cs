@@ -23,6 +23,19 @@ public class BulletShotgun : MonoBehaviour
             Vector2 moveDir = (direction).normalized * speed;
             bulletRB.velocity = new Vector2(moveDir.x, moveDir.y);
             Destroy(gameObject, 1.5f);
-        
+            Physics2D.IgnoreLayerCollision(10, 10);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Bullet")
+        {
+            Physics2D.IgnoreLayerCollision(10, 10);
+        }
+        Debug.Log("Hit");
+        if (other.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }
