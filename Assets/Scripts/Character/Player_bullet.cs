@@ -23,11 +23,18 @@ public class Player_bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("tag: "+other.gameObject.tag);
+        Debug.Log("layer: "+other.gameObject.layer);
+        if (other.gameObject.layer==3)
+        {
+            Destroy(gameObject);
+            Debug.Log(other.gameObject.tag);
+        }
         if (other.gameObject.tag == "Enemy")
         {
-            var player = other.gameObject.GetComponent<Health>();
+            var player = other.gameObject.GetComponent<SE_Health>();
             Destroy(gameObject);
-            player.TakeDamage(10);
+            player.TakeDamage(35);
             Debug.Log("Hit");
         }
     }

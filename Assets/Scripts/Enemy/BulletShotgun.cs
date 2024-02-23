@@ -28,6 +28,11 @@ public class BulletShotgun : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.layer==3)
+        {
+            Destroy(gameObject);
+            Debug.Log(other.gameObject.tag);
+        }
         Debug.Log("Hit");
         if (other.gameObject.tag == "Player")
         {
