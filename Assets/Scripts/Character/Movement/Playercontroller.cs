@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class Playercontroller : MonoBehaviour
 {
+    public float fireRate;
+    public bool canFire = true;
+    private float timer;
+    public GameObject bullet;
+    public GameObject bulletParent;
+    public float shootingRange;
     // SerializeField attribute allows the variable to be shown in the Inspector
     [SerializeField]
     private float speed = 10;// movement speed defluat 10
@@ -69,13 +75,28 @@ public class Playercontroller : MonoBehaviour
             anim.SetTrigger("TakeOf");
             Debug.Log("jump1"); // for test :D
         }
-        
-
-
         if(moveinput == 0){// animation for running
            anim.SetBool("IsRunning", false);
         }else{
            anim.SetBool("IsRunning", true);
         }
+
+        if(!canFire){
+            timer += Time.deltaTime;
+            if(timer > fireRate){
+                canFire = true;
+                timer = 0;
+            }
+        }
+        if (canFire && Input.GetMouseButtonDown(0))
+        {
+            canFire = false;
+            Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
+        }
+    }
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, shootingRange);
     }
 }

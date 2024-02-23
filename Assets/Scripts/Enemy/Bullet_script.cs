@@ -20,14 +20,12 @@ public class Bullet_script : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Bullet")
-        {
-            Physics2D.IgnoreLayerCollision(10, 10);
-        }
-        Debug.Log("Hit");
+        
         if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            var player = other.gameObject.GetComponent<Health>();
+            Destroy(gameObject);player.TakeDamage(10);
+            Debug.Log("Hit");
         }
     }
 }
