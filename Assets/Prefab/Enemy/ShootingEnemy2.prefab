@@ -572,6 +572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 8835418912301128233}
+  cam: {fileID: 0}
+  target: {fileID: 2513530280987927545}
 --- !u!50 &6084890085999197374
 Rigidbody2D:
   serializedVersion: 4

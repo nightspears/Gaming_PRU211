@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class HealthBarScript : MonoBehaviour
 {
     public Slider slider;
+    public Camera cam;
+    public Transform target;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,7 @@ public class HealthBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+    transform.rotation = Quaternion.Euler(0, 0, 0);
+    transform.position = target.position + new Vector3(0, 1.5f, 0);
     }
 }
