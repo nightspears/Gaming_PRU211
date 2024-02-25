@@ -13,7 +13,7 @@ public class IdleState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distance = Vector2.Distance(target.position,animator.transform.position);
-        if(distance < 5)
+        if(distance < 15)
         {
             animator.SetBool("isWalk" ,true);
         }

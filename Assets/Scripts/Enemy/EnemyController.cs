@@ -6,10 +6,12 @@ public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
     Transform target;
+   
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
+
 
     // Update is called once per frame
     void Update()
