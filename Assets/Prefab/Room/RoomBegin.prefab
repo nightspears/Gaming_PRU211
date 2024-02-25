@@ -200,6 +200,56 @@ MonoBehaviour:
     m_Bits: 8
   circleRadius: 0.4
   Here: 0
+--- !u!1 &958642071716865656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6122971217964602603}
+  - component: {fileID: 2533602212287681970}
+  m_Layer: 6
+  m_Name: TilesGen (37)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6122971217964602603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958642071716865656}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.91, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7326815216572752497}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2533602212287681970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958642071716865656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914a798d3414a7e4ab90727466874d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plaform: {fileID: 179361382950103350, guid: 0849d0cc6a06dae4481c1a61d65301aa, type: 3}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  circleRadius: 0.4
+  Here: 0
 --- !u!1 &1018832156423567276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,6 +1298,56 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3681158139717457094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914a798d3414a7e4ab90727466874d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plaform: {fileID: 179361382950103350, guid: 0849d0cc6a06dae4481c1a61d65301aa, type: 3}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  circleRadius: 0.4
+  Here: 0
+--- !u!1 &3848736018637403058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2392737054729443689}
+  - component: {fileID: 8227967367359532782}
+  m_Layer: 6
+  m_Name: TilesGen (36)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2392737054729443689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848736018637403058}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7326815216572752497}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8227967367359532782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848736018637403058}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 914a798d3414a7e4ab90727466874d5f, type: 3}
@@ -2956,6 +3056,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6720124064234513127}
+  - {fileID: 2392737054729443689}
+  - {fileID: 6122971217964602603}
   - {fileID: 4640399623900653466}
   - {fileID: 2046989213689700585}
   - {fileID: 7352575503759886120}
