@@ -27,6 +27,7 @@ public class Playercontroller : MonoBehaviour
     private Rigidbody2D rb; // to initialize Rigidbody2D
     [SerializeField]
     private int extraJumps = 1; // ammount of extra jump available (this will need update) 
+    public Health playerHealth;
     void Start()
     {
         // initialize
@@ -98,5 +99,10 @@ public class Playercontroller : MonoBehaviour
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, shootingRange);
+    }
+
+    public void TakeDame(int damege)
+    {
+        playerHealth.TakeDamage(damege);
     }
 }
