@@ -44,6 +44,6 @@ public class CameraMovement : MonoBehaviour
     {
     targetPosition.z = -1; // Keep the same z position
     float moveDistance = Time.deltaTime * cameraMoveSpeed; // Calculate move distance based on speed
-    mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, targetPosition, moveDistance);
+    mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, targetPosition, 1);
     }
 }

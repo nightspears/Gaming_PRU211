@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class EnemyC : MonoBehaviour
 {
@@ -19,9 +18,6 @@ public class EnemyC : MonoBehaviour
             {
               
                 InvokeRepeating("DamePlayer", 0, 1f);
-               
-
-
             }
         }
     }

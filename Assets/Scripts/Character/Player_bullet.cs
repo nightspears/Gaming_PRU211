@@ -18,7 +18,7 @@ public class Player_bullet : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         Vector2 moveDir = new Vector2(direction.x, direction.y).normalized.normalized * speed;
         bulletRB.velocity = new Vector2(moveDir.x, moveDir.y);
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1f);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -33,6 +33,13 @@ public class Player_bullet : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             var player = other.gameObject.GetComponent<SE_Health>();
+            Destroy(gameObject);
+            player.TakeDamage(35);
+            Debug.Log("Hit");
+        }
+        if (other.gameObject.tag == "Boss")
+        {
+            var player = other.gameObject.GetComponent<BossHealth>();
             Destroy(gameObject);
             player.TakeDamage(35);
             Debug.Log("Hit");

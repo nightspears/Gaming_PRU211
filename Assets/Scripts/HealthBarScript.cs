@@ -34,5 +34,9 @@ public class HealthBarScript : MonoBehaviour
     {
     transform.rotation = Quaternion.Euler(0, 0, 0);
     transform.position = target.position + new Vector3(0, 1.5f, 0);
+    if (target.tag == "Boss")
+    {
+        transform.position = target.position + new Vector3(0, 2.5f, 0);
+    }
     }
 }
