@@ -9,6 +9,8 @@ public class EnemyC : MonoBehaviour
      int minDamege = 10;
      public Playercontroller player;
 
+     public GameObject other;
+
    
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -38,10 +40,7 @@ public class EnemyC : MonoBehaviour
 
     void DamePlayer()
     {
-        int damege = UnityEngine.Random.Range(minDamege, maxDamege);
-        player.TakeDame(damege);
-       
-
-
+        var player = other.gameObject.GetComponent<Health>();
+        player.TakeDamage(25);
     }
 }

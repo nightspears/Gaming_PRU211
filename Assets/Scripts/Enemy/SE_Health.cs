@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SE_Health : MonoBehaviour
@@ -41,12 +40,23 @@ public class SE_Health : MonoBehaviour
             {
                 Debug.Log("EnemyFollow_shooting2 not found");   
             }
+
+            try
+            {
+                enemy.GetComponent<EnemyController>().enabled = false;
+            }
+            catch
+            {
+                Debug.Log("NewBehaviourScript not found");   
+            }
             animator.SetBool("Dead", true);
+            StartCoroutine(DestroyAfterAnimation());
         }
     }
-    // Update is called once per frame
-    void Update()
+
+    private IEnumerator DestroyAfterAnimation()
     {
-        
+        yield return new WaitForSeconds(1); // Wait for 1 second
+        Destroy(enemy); // Destroy the enemy object
     }
 }
