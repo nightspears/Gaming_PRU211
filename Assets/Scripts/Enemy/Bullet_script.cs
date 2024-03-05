@@ -23,7 +23,8 @@ public class Bullet_script : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             var player = other.gameObject.GetComponent<Health>();
-            Destroy(gameObject);player.TakeDamage(10);
+            Destroy(gameObject);
+            player.TakeDamage(10);
             Debug.Log("Hit");
         }
     }

@@ -16,6 +16,7 @@ public class Health : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+       
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
         if(currentHealth <= 0)

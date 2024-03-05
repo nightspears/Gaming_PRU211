@@ -17,12 +17,12 @@ public class WalkState : StateMachineBehaviour
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, newPos, speed * Time.deltaTime);
         float distance = Vector2.Distance(target.position, animator.transform.position);
        
-        if (distance < 1.5f)
+        if (distance < 1f)
         {
             animator.SetBool("isAttack", true);
         }
        
-        if (distance >= 5)
+        if (distance >= 15)
         {
             animator.SetBool("isWalk", false);
             
