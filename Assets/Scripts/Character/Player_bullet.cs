@@ -6,7 +6,8 @@ public class Player_bullet : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject target;
-    public float speed;
+    [SerializeField]
+    private float speed = 10f;
     Rigidbody2D bulletRB;
     private Vector3 mousePos;
         // Start is called before the first frame update
@@ -23,26 +24,21 @@ public class Player_bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("tag: "+other.gameObject.tag);
-        Debug.Log("layer: "+other.gameObject.layer);
         if (other.gameObject.layer==3)
         {
             Destroy(gameObject);
-            Debug.Log(other.gameObject.tag);
         }
         if (other.gameObject.tag == "Enemy")
         {
             var player = other.gameObject.GetComponent<SE_Health>();
             Destroy(gameObject);
             player.TakeDamage(35);
-            Debug.Log("Hit");
         }
         if (other.gameObject.tag == "Boss")
         {
             var player = other.gameObject.GetComponent<BossHealth>();
             Destroy(gameObject);
             player.TakeDamage(35);
-            Debug.Log("Hit");
         }
     }
 }

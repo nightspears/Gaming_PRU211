@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyC : MonoBehaviour
 {
-    
-     public GameObject other;
     Transform target;
     void Start()
     {
@@ -53,8 +51,7 @@ public class EnemyC : MonoBehaviour
 
     void DamePlayer()
     {
-        var player = other.gameObject.GetComponent<Health>();
-       
-        player.TakeDamage(10);
+        var player = target.gameObject.GetComponent<Health>();
+        player.TakeDamage(17);
     }
 }

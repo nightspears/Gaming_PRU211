@@ -25,7 +25,6 @@ public class Bullet_script : MonoBehaviour
             var player = other.gameObject.GetComponent<Health>();
             Destroy(gameObject);
             player.TakeDamage(10);
-            Debug.Log("Hit");
         }
     }
 }

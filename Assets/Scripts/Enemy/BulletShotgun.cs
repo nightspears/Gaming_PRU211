@@ -31,9 +31,7 @@ public class BulletShotgun : MonoBehaviour
         if (other.gameObject.layer==3)
         {
             Destroy(gameObject);
-            Debug.Log(other.gameObject.tag);
         }
-        Debug.Log("Hit");
         if (other.gameObject.tag == "Player")
         {
             var player = other.gameObject.GetComponent<Health>();

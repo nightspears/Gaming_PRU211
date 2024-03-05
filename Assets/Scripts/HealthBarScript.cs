@@ -8,8 +8,6 @@ public class HealthBarScript : MonoBehaviour
     public Slider slider;
     public Camera cam;
     public Transform target;
-
-    // Start is called before the first frame update
     void Start()
     {
         transform.rotation = Quaternion.identity;
@@ -29,7 +27,6 @@ public class HealthBarScript : MonoBehaviour
     {
         slider.value = health;
     }
-    // Update is called once per frame
     void Update()
     {
     transform.rotation = Quaternion.Euler(0, 0, 0);

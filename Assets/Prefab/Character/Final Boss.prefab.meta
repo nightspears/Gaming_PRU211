@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefab/Character/Final Boss.prefab.meta
 guid: 60ac851f1c965da45be6fe555fa6b26f
+========
+guid: f6b147162ad18614cb941f2dc2c859a5
+>>>>>>>> origin/HoaAn:Assets/Prefab/Room/Compoment/Ladder.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
