@@ -4,13 +4,30 @@ using UnityEngine;
 
 public class EnemyC : MonoBehaviour
 {
-     int maxDamege = 5;
-     int minDamege = 10;
-     public Playercontroller player;
-
+    
      public GameObject other;
+    Transform target;
+    void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
-   
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (target.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector2(0.2604211f, 0.2491516f);
+        }
+        else
+        {
+            transform.localScale = new Vector2(-1 * 0.2604211f, 0.2491516f);
+
+        }
+
+
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         {
@@ -37,6 +54,7 @@ public class EnemyC : MonoBehaviour
     void DamePlayer()
     {
         var player = other.gameObject.GetComponent<Health>();
-        player.TakeDamage(25);
+       
+        player.TakeDamage(10);
     }
 }
