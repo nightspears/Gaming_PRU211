@@ -4,14 +4,13 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public Transform roomCenter;
-    public float cameraMoveSpeed = 20; // Increased camera move speed
 
     private Camera mainCamera;
     private bool isPlayerInsideRoom = false;
 
     private void Start()
     {
-        mainCamera = Camera.main; // Get the main camera component
+        mainCamera = Camera.main;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,7 +42,6 @@ public class CameraMovement : MonoBehaviour
     private void MoveCameraToRoomCenter(Vector3 targetPosition)
     {
     targetPosition.z = -1; // Keep the same z position
-    float moveDistance = Time.deltaTime * cameraMoveSpeed; // Calculate move distance based on speed
-    mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, targetPosition, moveDistance);
+    mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, targetPosition, 1);
     }
 }

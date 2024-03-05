@@ -11,12 +11,11 @@ public class Playercontroller : MonoBehaviour
     public GameObject bullet;
     public GameObject bulletParent;
     public float shootingRange;
-    // SerializeField attribute allows the variable to be shown in the Inspector
     [SerializeField]
-    private float speed = 10;// movement speed defluat 10
+    private float speed = 10;
     [SerializeField]
-    private float jumpforce = 5;// how high can jump
-    private float moveinput;// take input
+    private float jumpforce = 5;
+    private float moveinput;
     [SerializeField]
     private bool facingRight;// to turn the player
     private bool Isground; // to double or even triple jump
@@ -28,6 +27,11 @@ public class Playercontroller : MonoBehaviour
     [SerializeField]
     private int extraJumps = 1; // ammount of extra jump available (this will need update) 
     public Health playerHealth;
+    [SerializeField]
+    private bool Pow = false;
+    public LayerMask LadderLayerMaks;
+    [SerializeField]
+    private float climbspeed =5f;
     void Start()
     {
         // initialize
@@ -35,11 +39,17 @@ public class Playercontroller : MonoBehaviour
         anim = GetComponent<Animator>();
     }
     void FixedUpdate(){// handle physics this time step is set to 0.02 seconds
+        Pow = Physics2D.OverlapCircle(transform.position, 0.5f, LadderLayerMaks);
+        if (Pow)
+        {
+            float climbInput = Input.GetAxisRaw("Vertical");
+            rb.velocity = new Vector2(rb.velocity.x, climbInput * climbspeed);
+        }
+
         Isground = Physics2D.OverlapCircle(groundCheck.position,Checkradius,WhatIsGround);
         moveinput = Input.GetAxis("Horizontal"); // take left right arrow
         rb.velocity = new Vector2(moveinput * speed,rb.velocity.y);
         //to check if face right move right or move left to flib
-        
         if(facingRight == false &&moveinput >0 ){
             Flib();
         }else if(facingRight == true && moveinput < 0){

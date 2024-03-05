@@ -20,6 +20,7 @@ public class WalkState : StateMachineBehaviour
         if (distance < 1f)
         {
             animator.SetBool("isAttack", true);
+            
         }
        
         if (distance >= 15)
